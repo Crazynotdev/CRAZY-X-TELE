@@ -5,7 +5,7 @@ import { sessionCount } from '../core/session.js';
 
 const bot = new telegramBot(config.telegramToken, { polling: true });
 
-const img = '../assets/bot.jpg';
+const img = '../assets/bot.png';
 
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
@@ -27,4 +27,5 @@ bot.onText(/\/start/, (msg) => {
     catch (error) {
         bot.sendMessage(chatId, `❌ Failed to create pairing for ${number}. Please ensure the number is correct and try again.`);
     }
+
     });
